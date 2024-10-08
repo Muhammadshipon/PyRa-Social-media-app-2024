@@ -8,6 +8,7 @@ import {
 import Login from './Pages/Login.jsx';
 import CreateAccount from './Pages/CreateAccount.jsx';
 import Home from './Pages/MainLayout/Home.jsx';
+import PrivateRoute from './PrivateRoutes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/home",
-    element:<Home></Home>
+    element:<PrivateRoute><Home></Home></PrivateRoute>
   }
 ]);
 
