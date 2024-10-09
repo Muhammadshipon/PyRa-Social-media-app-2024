@@ -68,21 +68,21 @@ const CreateAccount = () => {
           <h3 className="text-2xl font-bold text-center mt-5 text-gray-800">Create a new account</h3>
           <p className="text-center">It's quick and easy.</p>
                 {/* input fields  */}
-        <form onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
        <div className="flex flex-col  w-full p-5 border-t mt-3">
                    {/* name  */}
-       <input value={formData.name} onChange={handleChange} className="py-2 pl-4 border rounded-xl mb-5 text-sm font-normal outline-slate-300" type="text" name="name" placeholder="Name"/>
+       <input required  value={formData.name} onChange={handleChange} className="py-2 pl-4 border rounded-xl mb-5 text-sm font-normal outline-slate-300" type="text" name="name" placeholder="Name"/>
 
               {/* date of birth and gender  */}
      <div className="flex w-full flex-row items-center gap-10">
      <div>
       <p className="mb-2 text-xs pl-2">Date of birth?</p>
-      <input value={formData.dateOfBirth
+      <input required value={formData.dateOfBirth
 } onChange={handleChange} className="py-2 outline-none px-4 border rounded-xl mb-5 text-sm font-normal" type="date" name="dateOfBirth" />
       </div>
     <div className=" w-full">
     <p className="mb-2 text-xs pl-2">Gender ?</p>
-        <select value={formData.gender} onChange={handleChange} className="py-2 outline-none px-4 border rounded-xl mb-5 text-sm font-normal w-full"  name="gender" >
+        <select required value={formData.gender} onChange={handleChange} className="py-2 outline-none px-4 border rounded-xl mb-5 text-sm font-normal w-full"  name="gender" >
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="others">Others</option>
@@ -90,10 +90,10 @@ const CreateAccount = () => {
     </div>
      </div>
                            {/* email  */}
-       <input value={formData.email} onChange={handleChange} className="py-2 pl-4 border rounded-xl mb-5 text-sm font-normal outline-slate-300" type="email" name="email" placeholder="Email address"/>
+       <input required value={formData.email} onChange={handleChange} className="py-2 pl-4 border rounded-xl mb-5 text-sm font-normal outline-slate-300" type="email" name="email" placeholder="Email address"/>
                            {/* password  */}
        <div className="w-full flex">
-       <input value={formData.password} onChange={handleChange} className="py-2 pl-4 border rounded-xl  text-sm font-normal outline-slate-300 w-full" type={showPassword?'text':'password'} name="password" placeholder="Password" />
+       <input required value={formData.password} onChange={handleChange} className="py-2 pl-4 border rounded-xl  text-sm font-normal outline-slate-300 w-full" type={showPassword?'text':'password'} name="password" placeholder="Password" />
         <div className="relative right-10 top-3">
           {
             showPassword?<span onClick={handleShowPassword} className="absolute"> <IoEyeOffOutline /></span>:
