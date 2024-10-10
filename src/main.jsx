@@ -9,6 +9,7 @@ import Login from './Pages/Login.jsx';
 import CreateAccount from './Pages/CreateAccount.jsx';
 import Home from './Pages/MainLayout/Home.jsx';
 import PrivateRoute from './PrivateRoutes/PrivateRoute.jsx';
+import RightSideNavItemProvider from './Provider/RightSideNavItemProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+     <RightSideNavItemProvider>
      <RouterProvider router={router} />
+     </RightSideNavItemProvider>
   </StrictMode>,
 )

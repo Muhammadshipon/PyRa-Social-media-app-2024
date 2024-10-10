@@ -41,8 +41,9 @@ const CreateAccount = () => {
           // Post User data to server 
  const res = await axios.post('http://localhost:5000/auth/create-users', formData)
  console.log(res.data);
-      // store the token in the localStorage 
+      // store the token and user email in the localStorage 
       localStorage.setItem('token',res.data.token);
+      localStorage.setItem('email',res.data.newUser.email);
        navigate('/home')
     }catch(err){
       console.error(err.response.data)
