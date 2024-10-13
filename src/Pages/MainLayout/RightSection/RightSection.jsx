@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { NavItemsContext } from "../../../Provider/RightSideNavItemProvider";
+import MenuItemForProfile from "../../../Components/MenuItemForProfile";
 
 const RightSection = () => {
   const { menuItem } = useContext(NavItemsContext);
@@ -21,9 +22,7 @@ const RightSection = () => {
     );
   } else if (menuItem === 'profileItem') {
     return (
-      <div>
-        <p>profileItem</p>
-      </div>
+    <MenuItemForProfile></MenuItemForProfile>
     );
   } 
 };

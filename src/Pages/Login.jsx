@@ -50,7 +50,7 @@ const Login = () => {
        <input required value={formData.email} onChange={handleChange} className="p-3 border rounded-xl mb-5 text-xl font-normal outline-slate-200" type="email" name="email" id="" placeholder="Email address"/>
         <input required value={formData.password} onChange={handleChange} className="p-3 border rounded-xl  text-xl font-normal outline-slate-200" type="password" name="password" id="" placeholder="Password" />
         {invalidText?<p className="text-red-500 ml-4">wrong email or password! please try again.</p>:''}
-        <input className="bg-[#166FE5] text-white text-xl font-semibold p-3 rounded-xl hover:scale-95 mt-5" type="submit" value="Log in" />
+        <input className="bg-[#166FE5] text-white text-xl font-semibold p-3 rounded-xl active:scale-95 mt-5 hover:bg-blue-800" type="submit" value="Log in" />
        </div>
         </form>
 

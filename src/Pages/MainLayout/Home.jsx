@@ -1,11 +1,11 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import getLoginUserEmail from "../../utilities/getLoginUserEmail";
 import RightSection from "./RightSection/RightSection";
 
 
 const Home = () => {
-  const navigate = useNavigate();
+
   const {email} = getLoginUserEmail();
   console.log(email);
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         {/* navbar section  */}
       <Navbar></Navbar>
          {/* main section  */}
-    <section className="w-full min-h-screen flex">
+    <section className="w-full min-h-screen flex pt-[64px]">
             {/* left side section  */}
       <aside className="w-1/4 bg-gray-300">
       <p>left side section</p>
@@ -29,11 +29,7 @@ const Home = () => {
       </aside>
     
     </section>
-      Welcome! To PyRa....
-      <button className="btn m-auto" onClick={()=>{localStorage.removeItem('token');
-      localStorage.removeItem('email');
-            navigate('/');
-      }}>Logout</button>
+     
     </div>
   );
 };

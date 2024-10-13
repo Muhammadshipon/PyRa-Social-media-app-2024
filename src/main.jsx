@@ -10,6 +10,7 @@ import CreateAccount from './Pages/CreateAccount.jsx';
 import Home from './Pages/MainLayout/Home.jsx';
 import PrivateRoute from './PrivateRoutes/PrivateRoute.jsx';
 import RightSideNavItemProvider from './Provider/RightSideNavItemProvider.jsx';
+import Profile from './Pages/Profile/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,15 @@ const router = createBrowserRouter([
   },
   {
     path:"/home",
-    element:<PrivateRoute><Home></Home></PrivateRoute>
-  }
+    element:<PrivateRoute><Home></Home></PrivateRoute>,
+    children:[
+      {
+        path:"/home/profile/:email",
+        element:<Profile></Profile>
+      }
+    ]
+  },
+ 
 ]);
 
 createRoot(document.getElementById('root')).render(

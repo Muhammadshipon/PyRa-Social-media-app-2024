@@ -13,7 +13,7 @@ import { NavItemsContext } from "../Provider/RightSideNavItemProvider";
 const Navbar = () => {
   const {setMenuItem} =useContext(NavItemsContext);
   return (
-    <nav className="bg-blue-800 py-2 px-10 shadow-lg flex  items-center justify-center lg:justify-between w-full">
+    <nav className="bg-blue-800 py-2 fixed px-10 shadow-lg flex  items-center justify-center lg:justify-between w-full">
     
       {/* nav start  */}
      <div className="flex w-full lg:w-3/4 lg:gap-20  gap-3  flex-col lg:flex-row ">
